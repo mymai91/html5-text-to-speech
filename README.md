@@ -18,3 +18,7 @@ Use svg object to draw and call the api to speech
 
 * Run `yo webapp` to scaffold your webapp
 * Run `gulp serve` to preview and watch for changes
+
+## Open on browser
+
+Local: http://localhost:9000
