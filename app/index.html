@@ -15,7 +15,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.scss">
     <!-- endbuild -->
     
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -30,13 +30,31 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <form id='text_form'>
-      <input id='text' type='text' placeholder='Enter text' /><br/><br/>
-      <select id='voice'></select><br/><br/>
-      Range: <span id='rate_value'></span>
-      <input id="rate" type="range" min="-2" max="2" /><br/><br/>
-      <input id='play_button' type='submit' value='🔊 Play'>
-    </form>
+    <header>
+      <h1>Canvas HTML5 Project - Text-to-Speech</h1>
+    </header>
+
+    <section>
+      <form id='text_form' class='container'>
+        <div class='item1'>
+          <textarea id='text' placeholder="Enter Your Text Here...."></textarea>
+        </div>
+
+        <div class='item2'>
+          <p>Range: <span id='rate_value'></span></p>
+          <input id="rate" type="range" min="-2" max="2" /><br/><br/>
+
+          <p>Voices: </p>
+          <select id='voice'></select><br/><br/>
+
+          <input id='play_button' type='submit' value='🔊 Play'>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="floor"></div>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
