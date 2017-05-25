@@ -1,23 +1,20 @@
-@import "bower_components/bootstrap/scss/bootstrap.scss";
+// @import "bower_components/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css?family=Rajdhani|Nova+Mono');
 
+@import "base/all";
+@import "layout/all";
 * {
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+  margin: 0;
+  padding: 0;
 }
 
 html { background-color: #422737; }
 
-body { 
-  overflow: hidden; 
-  padding: 40px;
+body {
+  overflow: hidden;
+  padding: 70px 50px;
   letter-spacing: 1px;
   font-family: 'Rajdhani', sans-serif;
-}
-
-h1 {
-  color: #e34988;
-  margin-bottom: 10px;
 }
 
 p {
@@ -93,9 +90,9 @@ input#play_button:active {
 
 /* style input range */
 input[type=range] {
-  -webkit-appearance: none; 
-  width: 100%; 
-  background: transparent; 
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
 }
 
 input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; }
@@ -104,7 +101,7 @@ input[type=range]:focus { outline: none; }
 input[type=range]::-ms-track {
   width: 100%;
   cursor: pointer;
-  background: transparent; 
+  background: transparent;
   border-color: transparent;
   color: transparent;
 }
