@@ -21,47 +21,42 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
   </head>
   <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills float-right">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <!-- <li>
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">Contact</a>
-          </li> -->
-        </ul>
-        <h3 class="text-muted">kl_conference</h3>
-      </div>
+    <header>
+      <h1 class="title-main">Canvas HTML5 Project - Text-to-Speech</h1>
+    </header>
 
-      <div class="jumbotron">
-        <h1 class="display-3">html5-text-to-speech</h1>
-      </div>
-
-      <div class="row">
-        <div class="col-md-5">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="background: gainsboro;width: 500px;height: 500px;">
-            <path d="M53.8 177.3, C57 150, 51.1 119.5, 76 66, 101.6 37.3, 160.5 16, 212.2 42.3, 246 65.3, 265 106.8, 275 149.8" stroke="#000" fill="none"></path>
-          </svg>
+    <section>
+      <form id='text_form' class='container'>
+        <div class='item1'>
+          <textarea id='text' placeholder="Enter Your Text Here...."></textarea>
         </div>
 
-        <div class="col-md-7">
+        <div class='item2'>
+          <p>Range: <span id='rate_value'>0</span></p>
+          <input id="rate" type="range" min="-2" max="2" />
+          <br/><br/><br/>
+          <p>Voices: </p>
+          <select id='voice'></select>
+          <br/><br/><br/>
+          <input id='play_button' type='submit' value='🔊 Play'>
         </div>
-      </div>
+      </form>
+    </section>
 
-      <footer class="footer">
-        <h4 class="text-center">♥ Sylvia ♥ Jany ♥</h4>
-      </footer>
-    </div>
+    <footer>
+      <div class="backdrop1"></div>
+      <div class="backdrop2"></div>
+      <div class="floor"></div>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
