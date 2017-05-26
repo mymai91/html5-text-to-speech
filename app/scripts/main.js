@@ -32,9 +32,9 @@ $(document).ready(function(){
 	$('#text_form').submit(function(e){
 	  e.preventDefault();
 
-	  text = $('#text').val();
-	  voice = $('#voice').val();
-	  rate = $('#rate').val();
+	  var text = $('#text').val();
+	  var voice = $('#voice').val();
+	  var rate = $('#rate').val();
 
 	  responsiveVoice.speak(text, voice, {rate: rate});
 	});

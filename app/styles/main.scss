@@ -1,8 +1,8 @@
-@import "bower_components/bootstrap/scss/bootstrap.scss";
+// @import "bower_components/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css?family=Rajdhani|Nova+Mono');
 
-@import "base/all"
-        "layout/all";
+@import "base/all";
+@import "layout/all";
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ html { background-color: #422737; }
 
 body {
   overflow: hidden;
-  padding: 40px;
+  padding: 70px 50px;
   letter-spacing: 1px;
   font-family: 'Rajdhani', sans-serif;
 }
@@ -127,7 +127,6 @@ input[type=range]::-moz-range-thumb {
   background: #e44988;
   cursor: pointer;
 }
->>>>>>> fad683a24b2cfc16ba881e219db808a095a1ac37
 
 /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
