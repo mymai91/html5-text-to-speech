@@ -35,25 +35,28 @@
     </header>
 
     <section>
-      <form id='text_form' class='form-container'>
-        <div class='item--content-text'>
+      <form id='text_form' class='section__form'>
+        <div class='section__form--text'>
           <textarea id='text' placeholder="Enter Your Text Here...."></textarea>
         </div>
 
-        <div class='item--content-control'>
+        <div class='section__form--control'>
+
           <p class='label'>Range: <span id='rate_value'>1</span></p>
           <input id="rate" type="range" min="-2" max="3" />
-          <br/><br/><br/>
+          <br/><br/>
+
           <p class='label'>Voices: </p>
           <select id='voice'></select>
           <br/><br/><br/>
+          
           <input id='play_button' type='submit' value='🔊 Play'>
         </div>
       </form>
     </section>
 
     <footer>
-      <svg class="item--content-robot">
+      <svg class="bg--robot">
         <path id="topFace" d="M86 35, C86 35, 91.5 23.5, 99 35" stroke="#575057" fill="#575057"/>
         <path id="face" d="M54 37, C54 37, 92 34, 130 37, L130 37, 125 74, 59 74, 54 37, M54 37" stroke="#bababa" fill="#bababa"/>
         <line id="neck" x1="92" y1="74.5" x2="92" y2="82" stroke="#828284" stroke-width="7"/>
@@ -81,9 +84,9 @@
           <path d="M93 105, C99 100, 108 106, 90 120, 81 107, 84.7 100, 94 105" stroke="#efb1f0" stroke-width="2" fill="#d879d5"/>
         </g>
       </svg>
-      <div class="bg--layer-1"></div>
-      <div class="bg--layer-2"></div>
-      <div class="bg--layer-floor"></div>
+      <div class="bg--lvl1"></div>
+      <div class="bg--lvl2"></div>
+      <div class="bg--ground"></div>
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
