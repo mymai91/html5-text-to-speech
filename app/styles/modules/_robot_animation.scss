@@ -1,0 +1,82 @@
+#heart .beat-heart {
+  animation: beating_heart 1.5s linear infinite;
+}
+
+#board-info {
+  visibility: hidden;
+}
+
+.error-speech {
+
+  .eye {
+    animation: raise_eyes 0.75s linear infinite;
+  }
+
+  .board {
+    animation: raise_board 0.75s linear infinite;
+  }
+
+  #board-info {
+    visibility: visible;
+  }
+}
+
+.board {
+  fill: $white;
+  stroke: $red;
+  stroke-width: 5px;
+  width: 100%;
+  height: 100px;
+}
+
+.content-in-board {
+  fill: $white;
+  stroke: $red;
+  text-anchor: middle;
+}
+
+.board-info {
+  width: 100%;
+  height: 100px;
+}
+
+.mouth {
+   fill: #49474a;
+}
+@keyframes beating_heart {
+  0%{
+    transform: translateY(-2px) rotateX(0deg);
+  }
+
+  50%{
+    transform: translateY(-10px) rotateX(0deg);
+  }
+
+  100%{
+    transform: translateY(-2px) rotateX(0deg);
+  }
+}
+
+@keyframes raise_eyes {
+  0% {
+    fill: #fff;
+  }
+  50% {
+    fill: darken($red,15%)
+  }
+  100% {
+    fill: darken($red,1%)
+  }
+}
+
+@keyframes raise_board {
+  0% {
+    stroke: #fff;
+  }
+  50% {
+    stroke: darken($red,15%)
+  }
+  100% {
+    stroke: darken($red,1%)
+  }
+}

@@ -1,8 +1,9 @@
-// @import "bower_components/bootstrap/scss/bootstrap.scss";
+@import "bower_components/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css?family=Rajdhani|Nova+Mono');
 
 @import "base/all";
 @import "layout/all";
+@import "modules/all";
 
 *:focus {
   outline: none;
@@ -18,9 +19,9 @@ html { background-color: $barossa; }
   
   &--text { 
     flex-grow: 1; 
-
+    
     textarea {
-      width: 87%;
+      width: 100%;
       height: 400px;
       resize: none;
       padding: 19px;
@@ -35,10 +36,8 @@ html { background-color: $barossa; }
       border-bottom: 0;
     }
   }
-
   &--control {
-    width: 272.8px;
-    margin: 100px 140px 0 0;
+    margin-top: 100px;
 
     .label {
       color: $red-violet;
@@ -47,7 +46,7 @@ html { background-color: $barossa; }
       span { color: $dark-pink; }
     }
 
-    select#voice {
+    #voice {
       color: #e9498a;
       margin-top: 5px;
       padding: 10px 8px;
@@ -58,7 +57,7 @@ html { background-color: $barossa; }
       border-bottom-color: $red-violet;
     }
 
-    input#play_button {
+    #play_button {
       cursor: pointer;
       padding: 10px 8px 6px;
       color: $almost-white;
@@ -70,14 +69,13 @@ html { background-color: $barossa; }
       border-left: 0;
       border-right: 0;
       border-top: 0;
-      
       &:active {
         border-bottom-color: $smokey-topaz;
         background-color: $red-violet;
       }
     }
 
-    input#rate {
+    #rate {
       -webkit-appearance: none;
       width: 100%;
       background: transparent;

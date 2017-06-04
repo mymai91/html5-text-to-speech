@@ -35,13 +35,50 @@
     </header>
 
     <section>
-      <form id='text_form' class='section__form'>
-        <div class='section__form--text'>
+      <form id='text_form'  class='section__form'>
+        <div class='col-lg-6 section__form--text'>
           <textarea id='text' placeholder="Enter Your Text Here...."></textarea>
         </div>
 
-        <div class='section__form--control'>
+        <div class="col-lg-3 -js robot">
+          <svg id="board-info" class="-js board-info">
+            <rect class="board"/>
+            <text class="content-in-board" x="50%" y="50%">No content to speech</text>
+          </svg>
+          <svg class="item--content-robot" x="0" y="-15" viewBox="0 0 190 200">
+            <path id="topFace" d="M86 35, C86 35, 91.5 23.5, 99 35" stroke="#575057" fill="#575057"/>
+            <path id="face" d="M54 37, C54 37, 92 34, 130 37, L130 37, 125 74, 59 74, 54 37, M54 37" stroke="#bababa" fill="#bababa"/>
+            <line id="neck" x1="92" y1="74.5" x2="92" y2="82" stroke="#828284" stroke-width="7"/>
+            <g id="eyes">
+              <circle class="-js eye" cx="77" cy="50" r="7" stroke="#49474a" stroke-width="2" fill="#f4feff"/>
+              <circle class="-js eye" cx="106" cy="50" r="7" stroke="#49474a" stroke-width="2" fill="#f4feff"/>
+            </g>
 
+            <path id="mouth" class="mouth" d="M77 62, L77 62, 110 62, C110 62, 90 85, 77 62"/>
+
+            <polygon id="body" points="54 82, 130 82, 146 163, 42 163" stroke="#bababa" fill="#bababa"/>
+            <g id="hands">
+
+              <path class="arm" d="M54 82, L54 82, 28 109, 30 135" stroke="#575057" stroke-width="2" fill="none"/>
+              <circle cx="54" cy="84" r="7" stroke="#585158" fill="#585158"/>
+              <circle cx="28" cy="110" r="3" stroke="#585158" fill="#585158"/>
+              <path d="M23 144, L26 136, 35 134, 39 140" stroke="#575057" stroke-width="2" fill="none"/>
+
+
+              <path class="" d="M130 82, L130 82, 160 109, 159 135" stroke="#575057" stroke-width="2" fill="none"/>
+              <circle cx="130" cy="84" r="7" stroke="#585158" fill="#585158"/>
+              <circle cx="160" cy="110" r="3" stroke="#585158" fill="#585158"/>
+              <path d="M150 140, L154 133, 162 137, 164 142" stroke="#575057" stroke-width="2" fill="none"/>
+            </g>
+
+            <g id="heart">
+              <polygon points="65.2 95, 120 95.5, 117 124, 67 125" stroke="#ededed" stroke-width="2" fill="#564f56"/>
+              <path class="beat-heart" d="M93 105, C99 100, 108 106, 90 120, 81 107, 84.7 100, 94 105" stroke="#efb1f0" stroke-width="2" fill="#d879d5"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class='col-lg-3 section__form--control'>
           <p class='label'>Range: <span id='rate_value'>1</span></p>
           <input id="rate" type="range" min="-2" max="3" />
           <br/><br/>
@@ -56,34 +93,6 @@
     </section>
 
     <footer>
-      <svg class="bg--robot">
-        <path id="topFace" d="M86 35, C86 35, 91.5 23.5, 99 35" stroke="#575057" fill="#575057"/>
-        <path id="face" d="M54 37, C54 37, 92 34, 130 37, L130 37, 125 74, 59 74, 54 37, M54 37" stroke="#bababa" fill="#bababa"/>
-        <line id="neck" x1="92" y1="74.5" x2="92" y2="82" stroke="#828284" stroke-width="7"/>
-        <g id="eyes">
-          <circle cx="77" cy="50" r="7" stroke="#49474a" stroke-width="2" fill="#f4feff"/>
-          <circle cx="106" cy="50" r="7" stroke="#49474a" stroke-width="2" fill="#f4feff"/>
-        </g>
-        <polygon id="body" points="54 82, 130 82, 146 163, 42 163" stroke="#bababa" fill="#bababa"/>
-        <g id="hands">
-
-          <path d="M54 82, L54 82, 28 109, 30 135" stroke="#575057" stroke-width="2" fill="none"/>
-          <circle cx="54" cy="84" r="7" stroke="#585158" fill="#585158"/>
-          <circle cx="28" cy="110" r="3" stroke="#585158" fill="#585158"/>
-          <path d="M23 144, L26 136, 35 134, 39 140" stroke="#575057" stroke-width="2" fill="none"/>
-
-
-          <path d="M130 82, L130 82, 160 109, 159 135" stroke="#575057" stroke-width="2" fill="none"/>
-          <circle cx="130" cy="84" r="7" stroke="#585158" fill="#585158"/>
-          <circle cx="160" cy="110" r="3" stroke="#585158" fill="#585158"/>
-          <path d="M150 140, L154 133, 162 137, 164 142" stroke="#575057" stroke-width="2" fill="none"/>
-        </g>
-
-        <g id="hearth">
-          <polygon points="65.2 95, 120 95.5, 117 124, 67 125" stroke="#ededed" stroke-width="2" fill="#564f56"/>
-          <path d="M93 105, C99 100, 108 106, 90 120, 81 107, 84.7 100, 94 105" stroke="#efb1f0" stroke-width="2" fill="#d879d5"/>
-        </g>
-      </svg>
       <div class="bg--lvl1"></div>
       <div class="bg--lvl2"></div>
       <div class="bg--ground"></div>
