@@ -1,0 +1,16 @@
+#heart .beat-heart {
+  animation: beating_heart 1.5s linear infinite;
+}
+@keyframes beating_heart {
+  0%{
+    transform: translateY(-2px) rotateX(0deg);
+  }
+
+  50%{
+    transform: translateY(-10px) rotateX(0deg);
+  }
+
+  100%{
+    transform: translateY(-2px) rotateX(0deg);
+  }
+}

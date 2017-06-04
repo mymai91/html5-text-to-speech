@@ -3,6 +3,7 @@
 
 @import "base/all";
 @import "layout/all";
+@import "modules/all";
 
 * {
   margin: 0;
@@ -21,8 +22,8 @@ body {
 .form-container { display: flex; }
 
 .item {
-  &--content-text { 
-    flex-grow: 1; 
+  &--content-text {
+    flex-grow: 1;
 
     textarea {
       width: 87%;
@@ -74,7 +75,7 @@ body {
       font-weight: 600;
       width: 100%;
       font-size: 16px;
-      
+
       &:active {
         border-bottom-color: #682742;
         background-color: #b24485;
