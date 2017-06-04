@@ -35,8 +35,8 @@
     </header>
 
     <section>
-      <form id='text_form' class='form-container'>
-        <div class='col-lg-6 item--content-text'>
+      <form id='text_form'  class='section__form'>
+        <div class='col-lg-6 section__form--text'>
           <textarea id='text' placeholder="Enter Your Text Here...."></textarea>
         </div>
 
@@ -78,22 +78,24 @@
           </svg>
         </div>
 
-        <div class='col-lg-3 item--content-control'>
+        <div class='col-lg-3 section__form--control'>
           <p class='label'>Range: <span id='rate_value'>1</span></p>
           <input id="rate" type="range" min="-2" max="3" />
-          <br/><br/><br/>
+          <br/><br/>
+
           <p class='label'>Voices: </p>
           <select id='voice'></select>
           <br/><br/><br/>
+          
           <input id='play_button' type='submit' value='🔊 Play'>
         </div>
       </form>
     </section>
 
     <footer>
-      <div class="bg--layer-1"></div>
-      <div class="bg--layer-2"></div>
-      <div class="bg--layer-floor"></div>
+      <div class="bg--lvl1"></div>
+      <div class="bg--lvl2"></div>
+      <div class="bg--ground"></div>
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
