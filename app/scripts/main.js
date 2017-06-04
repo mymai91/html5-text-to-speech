@@ -5,10 +5,10 @@ $(document).ready(function(){
 	});
 
 	// voice selections
-	var voicelist = ['UK English Female', 
-									'UK English Male', 
-									'Brazilian Portuguese Female', 
-									'Chinese Female', 
+	var voicelist = ['UK English Female',
+									'UK English Male',
+									'Brazilian Portuguese Female',
+									'Chinese Female',
 									'Chinese (Hong Kong) Female',
 									'Deutsch Female',
 									'French Female',
@@ -33,9 +33,17 @@ $(document).ready(function(){
 	  e.preventDefault();
 
 	  var text = $('#text').val();
-	  var voice = $('#voice').val();
-	  var rate = $('#rate').val();
+		var voice = $('#voice').val();
+		var rate = $('#rate').val();
 
-	  responsiveVoice.speak(text, voice, {rate: rate});
+		if (text == "") {
+			var text = "No content to speech";
+			$('.robot').addClass('error-speech');
+		}
+		else {
+			$('.robot').removeClass('error-speech');
+
+		}
+		responsiveVoice.speak(text, voice, {rate: rate});
 	});
 });
