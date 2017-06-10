@@ -49,6 +49,10 @@ input.section__form--submit {
 
 .section__form {
   &--control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 18px;
     margin-bottom: 36px;
     .label {
@@ -56,6 +60,15 @@ input.section__form--submit {
       font-weight: 600;
 
       span { color: $dark-pink; }
+    }
+
+    .voice-control {
+      flex: 1;
+    }
+
+    .rate-control {
+      flex: 1;
+      margin-left: 70px;
     }
 
     #voice {
@@ -149,7 +162,10 @@ input.section__form--submit {
   }
 }
 
-
+.item--content-robot {
+  position: absolute;
+  z-index: -1;
+}
 /*   footer   */
 .footer {
   position: absolute;
@@ -170,6 +186,7 @@ input.section__form--submit {
   &--lvl1 {
     bottom: 20px;
     height: 64px;
+    z-index: -2;
     background-color: rgba(119, 90, 108, 0.17);
     @extend .footer;
   }
@@ -177,6 +194,7 @@ input.section__form--submit {
   &--lvl2 {
     bottom: 84px;
     height: 400px;
+    z-index: -2;
     background-color: rgba(226, 208, 219, 0.08);
     @extend .footer;
   }
