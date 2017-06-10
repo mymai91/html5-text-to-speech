@@ -1,82 +1,35 @@
-#heart .beat-heart {
-  animation: beating_heart 1.5s linear infinite;
+#eyes .eye {
+  transform-origin: 0px;
+  animation: blink 4s linear infinite;
 }
 
-#board-info {
-  visibility: hidden;
-}
-
-.error-speech {
-
-  .eye {
-    animation: raise_eyes 0.75s linear infinite;
+@keyframes blink {
+  90% {
+    transform: none;
+    animation-timing-function: ease-in;
   }
-
-  .board {
-    animation: raise_board 0.75s linear infinite;
-  }
-
-  #board-info {
-    visibility: visible;
-  }
-}
-
-.board {
-  fill: $white;
-  stroke: $red;
-  stroke-width: 5px;
-  width: 100%;
-  height: 100px;
-}
-
-.content-in-board {
-  fill: $white;
-  stroke: $red;
-  text-anchor: middle;
-}
-
-.board-info {
-  width: 100%;
-  height: 100px;
-}
-
-.mouth {
-   fill: #49474a;
-}
-@keyframes beating_heart {
-  0%{
-    transform: translateY(-2px) rotateX(0deg);
-  }
-
-  50%{
-    transform: translateY(-10px) rotateX(0deg);
-  }
-
-  100%{
-    transform: translateY(-2px) rotateX(0deg);
-  }
-}
-
-@keyframes raise_eyes {
-  0% {
-    fill: #fff;
-  }
-  50% {
-    fill: darken($red,15%)
+  93% {
+    transform: translateY(3px) scaleY(0);
   }
   100% {
-    fill: darken($red,1%)
+    animation-timing-function: ease-out;
   }
 }
 
-@keyframes raise_board {
+#upper-body {
+  transform: rotate(2deg);
+  transform-origin: 50% 50%;
+  animation: tilt 2s linear infinite; 
+}
+
+@keyframes tilt {
   0% {
-    stroke: #fff;
+    transform: rotate(0deg);
   }
   50% {
-    stroke: darken($red,15%)
+    transform: rotate(-2deg);
   }
   100% {
-    stroke: darken($red,1%)
+    transform: rotate(0deg);
   }
 }
