@@ -23,7 +23,6 @@
     <!-- endbuild -->
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-
   </head>
   <body>
     <!--[if IE]>
@@ -34,61 +33,91 @@
       <h1 class="title--main">Canvas HTML5 Project - Text-to-Speech</h1>
     </header>
 
-    <section>
-      <form id='text_form'  class='section__form'>
-        <div class='col-lg-6 section__form--text'>
-          <textarea id='text' placeholder="Enter Your Text Here...."></textarea>
-        </div>
-
-        <div class="col-lg-3 -js robot">
-          <svg id="board-info" class="-js board-info">
-            <rect class="board"/>
-            <text class="content-in-board" x="50%" y="50%">No content to speech</text>
-          </svg>
-          <svg class="item--content-robot" x="0" y="-15" viewBox="0 0 190 200">
-            <path id="topFace" d="M86 35, C86 35, 91.5 23.5, 99 35" stroke="#575057" fill="#575057"/>
-            <path id="face" d="M54 37, C54 37, 92 34, 130 37, L130 37, 125 74, 59 74, 54 37, M54 37" stroke="#bababa" fill="#bababa"/>
-            <line id="neck" x1="92" y1="74.5" x2="92" y2="82" stroke="#828284" stroke-width="7"/>
-            <g id="eyes">
-              <circle class="-js eye" cx="77" cy="50" r="7" stroke="#49474a" stroke-width="2" fill="#f4feff"/>
-              <circle class="-js eye" cx="106" cy="50" r="7" stroke="#49474a" stroke-width="2" fill="#f4feff"/>
+    <section class='row'>
+      <div class="col-lg-4">
+        <svg class="item--content-robot" x="0" y="-15" viewBox="0 0 190 267">
+          <g id="legs">
+            <g id="left">
+              <rect x="74" y="166" width="2" height="10" fill="#575057"></rect>
+              <circle cx="75" cy="161" r="8" fill="#0"></circle>
+              <path d="M62,186 q13,-22 26,0" fill="#828284"></path>
+              <rect x="60" y="185" width="30" height="5" fill="#000"></rect>
             </g>
 
-            <path id="mouth" class="mouth" d="M77 62, L77 62, 110 62, C110 62, 90 85, 77 62"/>
+            <g id="right">
+              <rect x="109" y="166" width="2" height="10" fill="#575057"></rect>
+              <circle cx="110" cy="161" r="8" fill="#0"></circle>
+              <path d="M97,186 q13,-22 26,0" fill="#828284"></path>
+              <rect x="95" y="185" width="30" height="5" fill="#000"></rect>
+            </g>
+          </g>
 
+          <g id="upper-body">
+            <line id="neck" x1="92" y1="74.5" x2="92" y2="82" stroke="#575057" stroke-width="7"/>
             <polygon id="body" points="54 82, 130 82, 146 163, 42 163" stroke="#bababa" fill="#bababa"/>
-            <g id="hands">
-
-              <path class="arm" d="M54 82, L54 82, 28 109, 30 135" stroke="#575057" stroke-width="2" fill="none"/>
-              <circle cx="54" cy="84" r="7" stroke="#585158" fill="#585158"/>
-              <circle cx="28" cy="110" r="3" stroke="#585158" fill="#585158"/>
-              <path d="M23 144, L26 136, 35 134, 39 140" stroke="#575057" stroke-width="2" fill="none"/>
-
-
-              <path class="" d="M130 82, L130 82, 160 109, 159 135" stroke="#575057" stroke-width="2" fill="none"/>
-              <circle cx="130" cy="84" r="7" stroke="#585158" fill="#585158"/>
-              <circle cx="160" cy="110" r="3" stroke="#585158" fill="#585158"/>
-              <path d="M150 140, L154 133, 162 137, 164 142" stroke="#575057" stroke-width="2" fill="none"/>
-            </g>
 
             <g id="heart">
-              <polygon points="65.2 95, 120 95.5, 117 124, 67 125" stroke="#ededed" stroke-width="2" fill="#564f56"/>
-              <path class="beat-heart" d="M93 105, C99 100, 108 106, 90 120, 81 107, 84.7 100, 94 105" stroke="#efb1f0" stroke-width="2" fill="#d879d5"/>
+              <polygon points="60 95, 125 95.5, 123 124, 63 125" stroke="#ededed" stroke-width="2" fill="#564f56"/>
+              <text id="robot-text" x="67" y="112" font-size="7px" fill="#fff">
+                Hello, I speak.
+              </text>
             </g>
-          </svg>
-        </div>
 
-        <div class='col-lg-3 section__form--control'>
-          <p class='label'>Range: <span id='rate_value'>1</span></p>
-          <input id="rate" type="range" min="-2" max="3" />
-          <br/><br/>
+            <g id="hands">
+              <g id="left">
+                <path class="arm" d="M54 82, L54 82, 28 109, 30 135" stroke="#575057" stroke-width="2" fill="none"/>
+                <circle cx="54" cy="84" r="7" stroke="#585158" fill="#000"/>
+                <circle cx="28" cy="110" r="3" stroke="#585158" fill="#000"/>
+                <path d="M23 144, L26 136, 35 134, 39 140" stroke="#575057" stroke-width="2" fill="none"/>
+              </g>
+              
+              <g id="right">
+                <path class="arm" d="M130 82, L130 82, 160 109, 159 135" stroke="#575057" stroke-width="2" fill="none"/>
+                <circle cx="130" cy="84" r="7" stroke="#585158" fill="#000"/>
+                <circle cx="160" cy="110" r="3" stroke="#585158" fill="#000"/>
+                <path d="M150 140 L154,133 163,135 166,143" stroke="#575057" stroke-width="2" fill="none"></path>
+              </g>
+            </g>
 
-          <p class='label'>Voices: </p>
-          <select id='voice'></select>
-          <br/><br/><br/>
+            <g id="head">
+              <circle cx="92" cy="36" r="7" stroke="#585158" fill="#000"/>
+              <path id="face" d="M54 37, C54 37, 92 34, 130 37, L130 37, 125 74, 59 74, 54 37, M54 37" stroke="#bababa" fill="#bababa"/>
+              
+              <g id="eyes">
+                <circle class="-js eye" cx="77" cy="55" r="7" stroke="#000" stroke-width="2" fill="#f4feff"/>
+                <circle class="-js eye" cx="106" cy="55" r="7" stroke="#000" stroke-width="2" fill="#f4feff"/>
+              </g>
+            </g>
+          </g>
+
           
-          <input id='play_button' type='submit' value='🔊 Play'>
+
+          <rect x="0" y="190" width="190" height="200" fill="#351c2b"></rect>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+      </div>
+
+      <form id='text_form'  class='col-lg-8 section__form'>
+        <textarea id='text' placeholder="Enter Your Text Here...." class='section__form--text'></textarea>
+
+        <div class='section__form--control row'>         
+          <div class='col-lg-4'>
+            <p class='label'>Voices: </p>
+            <select id='voice'></select>
+          </div>
+
+          <div class='col-lg-4'>
+            <p class='label'>Range: <span id='rate_value'>1</span></p>
+            <input id="rate" type="range" min="-2" max="3" />
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <input id='play_button' type='submit' value='🔊 Play' class='section__form--submit'>
+          </div>
+        </div>
+
       </form>
     </section>
 

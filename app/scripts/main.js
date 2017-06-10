@@ -37,13 +37,18 @@ $(document).ready(function(){
 		var rate = $('#rate').val();
 
 		if (text == "") {
-			var text = "No content to speech";
+			var text = "Please enter text";
 			$('.robot').addClass('error-speech');
 		}
 		else {
 			$('.robot').removeClass('error-speech');
 
 		}
-		responsiveVoice.speak(text, voice, {rate: rate});
+		$('#robot-text').text('.......................');
+		responsiveVoice.speak(text, voice, {rate: rate, onend: OnFinishedPlaying});
 	});
+
+	var OnFinishedPlaying = function () {
+  	$("#robot-text").text('Hello, I speak.');
+  };
 });

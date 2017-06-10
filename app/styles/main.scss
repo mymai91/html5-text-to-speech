@@ -14,31 +14,43 @@
 
 html { background-color: $barossa; }
 
-.section__form {
-  display: flex;
-  
-  &--text { 
-    flex-grow: 1; 
-    
-    textarea {
-      width: 100%;
-      height: 400px;
-      resize: none;
-      padding: 19px;
-      color: $almost-white;
-      background-color: $dark-byzantium;
-      font-size: $general-size;
-      font-family: $mono-font;
-      border-width: 15px;
-      border-color: $purple-taupe;
-      border-left: 0;
-      border-top: 0;
-      border-bottom: 0;
-    }
-  }
-  &--control {
-    margin-top: 100px;
+textarea.section__form--text {
+  width: 100%;
+  height: 400px;
+  resize: none;
+  padding: 19px;
+  color: $almost-white;
+  background-color: $dark-byzantium;
+  font-size: $general-size;
+  font-family: $mono-font;
+  border-width: 15px;
+  border-color: #351c2b;
+  border-top: 0;
+  border-left: 0;
+}
 
+input.section__form--submit {
+  cursor: pointer;
+  padding: 10px 8px 6px;
+  color: $almost-white;
+  width: 100%;
+  background-color: $smokey-topaz;
+  font-size: $general-size;
+  border-color: $red-violet;
+  border-width: $border-width;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  &:active {
+    border-bottom-color: $smokey-topaz;
+    background-color: $red-violet;
+  }
+}
+
+.section__form {
+  &--control {
+    margin-top: 18px;
+    margin-bottom: 36px;
     .label {
       color: $red-violet;
       font-weight: 600;
@@ -50,29 +62,12 @@ html { background-color: $barossa; }
       color: #e9498a;
       margin-top: 5px;
       padding: 10px 8px;
+      width: 100%;
       background-color: transparent;
       font-size: $general-size;
       border-width: $border-width;
       border-color: $smokey-topaz;
       border-bottom-color: $red-violet;
-    }
-
-    #play_button {
-      cursor: pointer;
-      padding: 10px 8px 6px;
-      color: $almost-white;
-      width: 100%;
-      background-color: $smokey-topaz;
-      font-size: $general-size;
-      border-color: $red-violet;
-      border-width: $border-width;
-      border-left: 0;
-      border-right: 0;
-      border-top: 0;
-      &:active {
-        border-bottom-color: $smokey-topaz;
-        background-color: $red-violet;
-      }
     }
 
     #rate {
@@ -181,8 +176,8 @@ html { background-color: $barossa; }
 
   &--lvl2 {
     bottom: 84px;
-    height: 550px;
-    background-color: rgba(109, 45, 86, 0.14);
+    height: 400px;
+    background-color: rgba(226, 208, 219, 0.08);
     @extend .footer;
   }
   
