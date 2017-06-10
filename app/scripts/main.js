@@ -37,14 +37,13 @@ $(document).ready(function(){
 		var rate = $('#rate').val();
 
 		if (text == "") {
-			var text = "Please enter text";
-			$('.robot').addClass('error-speech');
+			text = 'Please enter your text.'
+			$('#robot-text').text('Error.');
+		} else {
+			text = $('#text').val();
+			$('#robot-text').text('.......................');
 		}
-		else {
-			$('.robot').removeClass('error-speech');
 
-		}
-		$('#robot-text').text('.......................');
 		responsiveVoice.speak(text, voice, {rate: rate, onend: OnFinishedPlaying});
 	});
 
